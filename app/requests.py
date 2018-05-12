@@ -33,7 +33,26 @@ def get_sources(source):
     return sources_results
 
 
-def process_results(source_list):
+def get_articles(id):
+    '''
+    Function to get a source and it's articles
+    '''
+    get_articles_url = "https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)"
+
+    with urllib.request.urlopen(get_articles_url) as url:
+        get_articles_data = url.read()
+        get_articles_response = json.loads(get_articles_data)
+
+        articles_results = None
+
+        if get_articles_response['articles']:
+            articles_results_list = get_articles_response['articles']
+            articles_results = process_articles(articles_results_list)
+
+    return articles_results
+
+
+def process_results(sources_list):
     """
     Function that processes the results list and transforms them into a list of objects
 
@@ -49,12 +68,37 @@ def process_results(source_list):
         name = source_item.get('name')
         url = source_item.get('url')
         description = source_item.get('description')
-        cateory = source_item.get('category')
+        category = source_item.get('category')
 
 
         source_object = Sources(id, name, url, description, category)
         sources_results.append(source_object)
 
     return sources_results
+
+
+def process_articles(article_list):
+    """
+    Function that processes the article results and transforms them into a list of objects
+
+    Args:
+        article_list: A list of dictionaries that contains article details
+    Returns:
+        article_results: A list of article objects
+    """
+    article_results = []
+
+    for article_item in article_list:
+        source = article_item.get('source')
+        title = article_item.get('title')
+        imageurl = article_item.get('imageurl')
+        description = article_item.get('description')
+        url = article_item.get('url')
+        timepublished = article_item.get('timepublished')
+
+        article_object = Articles(source, title, url, imageurl, timepublished, description)
+        article_results.append(article_object)
+
+    return article_results
 
 
