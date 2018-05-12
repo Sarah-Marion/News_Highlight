@@ -4,11 +4,11 @@ class News:
         self.description = description
         self.url = url
 
-class Article:
+class Articles:
     """
-    Article class to define Article Objects
+    Articles class to define Article Objects
     """
-    def __init__(self, title, name, url, imageurl, author=None,timepublished, description = None):
+    def __init__(self, title, name, url, imageurl, author,timepublished, description):
         self.title = title
         self.name = name
         self.url = url
@@ -16,3 +16,15 @@ class Article:
         self.author = author
         self.timepublished = timepublished
         self.description = description
+
+
+class Sources:
+    """
+    Sources class to define the News Source Objects
+    """
+    def __init__(self, id, name, description, url, category):
+        self.id = id
+        self. name = name
+        self.description = description
+        self.url = url
+        self.category =  category
