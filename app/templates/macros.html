@@ -1,0 +1,39 @@
+{%  macros.displaySourcesList(sources) %}
+    {%  for source in sources %}
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <a href="/articles/{{ source.id  }}">
+                <h3 style="font-weight: bold">  {{  source.name }} </h3>
+            </a>
+            <h5 style="color: chocolate">  {{  source.category.upper()}} </h5>
+        <div class="well" style="height: 100px; background-color: lightseagreen;">
+            <p style="font-weight: bold">  {{  source.description|truncate(150) }} </p>
+
+        </div>
+
+        </div>
+
+    {%  endfor %}
+{%  endmacro %}
+
+<!-- Display Articles -->
+
+{%  macrodisplayArticleList(article_list) %}
+    {%  for article in article_list %}
+    <!-- lets now print the source right here -->
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <li class="well" style="list-style: none; background-color: whitesmoke;">
+                <a href="{{article.url}}" ></a>
+                <h3 style="font-size: 16px; color: chocolate;">  {{  article.title }} </h3>
+                <p style="font-size: 10px;">  Date: {{  article.timepublished[:10] }} </p>
+                <p style="font-size: 12px;">{{ article.description|truncate(70) }}</p>
+                <a href="{{ article.url }}" class="article-link" style="color: chocolate;"> Read more...</a>
+                <img src='{{ article.urlToImage }}' width="" height="" class="img-responsive">
+
+            </li>
+
+        </div>
+
+    {%  endfor %}
+{%  endmacro %}
