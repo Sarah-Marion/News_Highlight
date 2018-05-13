@@ -18,6 +18,7 @@
 ## Dependancy Installments
 
 > * pip install python3.6
+> * pip install flask
 > * pip install flask-bootstrap
 > * pip install flask-script
 
@@ -29,17 +30,17 @@
 
 ## User Stories
 
-> * A user can create an account with details such as login and password
-> * A user can generate passwors for a new account
-> * Store existing login credentials
+As a user I would like:
+> * to see various news sources and select the ones I prefer
+> * to see all the news articles from that news source
+> * to see the image, description and time the news article was created.
+> * to click on an article and read it fully from the news source.
 
 ## Technologies Used
 
 > * Python3.6
-> * pyperclip
-> * pyfiglet
-> * termcolor
-> * colorama
+> * Flask framework
+> * Bootstrap
 
 ## Specifications
 
