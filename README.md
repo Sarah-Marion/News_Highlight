@@ -1,5 +1,7 @@
 # News_Highlight
 
+> This application lists various sources of news and subsequent highlights in each of the source. clicking an individual highlights takes the user to the article itself for the full story
+
 ## Author
 
 > By **Sarah Marion**
@@ -12,8 +14,8 @@
 
 ## Setup/Installation Requirements
 
-> Clone [This Repository](https://github.com/Sarah-Marion/Password_Locker.git) and run the `run.py`file by executing the following commands:-
-> * `chmod +x run.py` then `run.py`
+<!-- > Clone [This Repository](https://github.com/Sarah-Marion/Nesws-Highlight.git) and run the `run.py`file by executing the following commands:-
+> * `chmod +x run.py` then `run.py` -->
 
 ## Dependancy Installments
 
@@ -31,6 +33,7 @@
 ## User Stories
 
 As a user I would like:
+
 > * to see various news sources and select the ones I prefer
 > * to see all the news articles from that news source
 > * to see the image, description and time the news article was created.
