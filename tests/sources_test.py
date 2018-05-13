@@ -13,6 +13,7 @@ class SourcesTest(unittest.TestCase):
         """
         Set up method to run before each test case 
         """
+        
         self.news_source = Sources('abc-news-au','ABC News (AU)', 'Australia\'s most trusted source of local, national and world news. Comprehensive, independent, in-depth analysis, the latest business, sport, weather and more.',"http://www.abc.net.au/news","general")
 
     
