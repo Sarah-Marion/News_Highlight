@@ -42,8 +42,9 @@ class ArticleTest(unittest.TestCase):
         """
         Test case to check if UTC date format is converted to a display-friendly format
         """
-        # display_friendly_format = self.new_article.publish_date_format(self.new_article.publishedAt)
-        # self.assertEqual( display_friendly_format, '2018-05-13')
+        
+        display_friendly_format = self.new_article.publish_date_format(self.new_article.publishedAt)
+        self.assertEqual( display_friendly_format, '2018-05-13')
 
 
 
