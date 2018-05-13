@@ -34,10 +34,10 @@ def get_sources(source):
 
 
 def get_articles(id):
-    '''
+    """
     Function to get a source and it's articles
-    '''
-    get_articles_url = "https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)"
+    """
+    get_articles_url = "https://newsapi.org/v2/top-headlines?sources={}&apiKey={}".format(id, api_key)
 
     with urllib.request.urlopen(get_articles_url) as url:
         get_articles_data = url.read()
@@ -66,12 +66,12 @@ def process_results(sources_list):
     for source_item in sources_list:
         id = source_item.get('id')
         name = source_item.get('name')
-        url = source_item.get('url')
         description = source_item.get('description')
+        url = source_item.get('url')
         category = source_item.get('category')
 
 
-        source_object = Sources(id, name, url, description, category)
+        source_object = Sources(id, name, description,url, category)
         sources_results.append(source_object)
 
     return sources_results
@@ -91,12 +91,12 @@ def process_articles(article_list):
     for article_item in article_list:
         source = article_item.get('source')
         title = article_item.get('title')
-        imageurl = article_item.get('imageurl')
+        urlToImage = article_item.get('urlToImage')
         description = article_item.get('description')
-        url = article_item.get('url')
-        timepublished = article_item.get('timepublished')
+        urlToArticle = article_item.get('url')
+        publishedAt = article_item.get('publishedAt')
 
-        article_object = Articles(source, title, url, imageurl, timepublished, description)
+        article_object = Articles(source, title, urlToArticle, urlToImage,description, publishedAt)
         article_results.append(article_object)
 
     return article_results

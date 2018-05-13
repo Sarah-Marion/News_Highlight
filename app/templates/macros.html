@@ -1,4 +1,4 @@
-{%  macros.displaySourcesList(sources) %}
+{%  macro displaySourcesList(sources) %}
     {%  for source in sources %}
 
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
@@ -18,17 +18,22 @@
 
 <!-- Display Articles -->
 
-{%  macrodisplayArticleList(article_list) %}
+{%  macro displayArticleList(article_list) %}
     {%  for article in article_list %}
     <!-- lets now print the source right here -->
 
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <li class="well" style="list-style: none; background-color: whitesmoke;">
-                <a href="{{article.url}}" ></a>
                 <h3 style="font-size: 16px; color: chocolate;">  {{  article.title }} </h3>
-                <p style="font-size: 10px;">  Date: {{  article.timepublished[:10] }} </p>
-                <p style="font-size: 12px;">{{ article.description|truncate(70) }}</p>
-                <a href="{{ article.url }}" class="article-link" style="color: chocolate;"> Read more...</a>
+                <a href="{{article.description}} ">{{ article.description }}</a>
+                <p style="font-size: 10px;">  Date: {{  article.publishedAt[:10] }} </p>
+                <!-- <p style="font-size: 12px;">{{ article.description|truncate(70) }}</p> -->
+                <!-- <a href="{{ article.url }}" class="article-link" style="color:chocolate;"> Read more...</a> -->
+                <button type="button" class="btn btn-secondary" data-toggle="collapse" data-target="#show">Read more...</button>
+                <div id="show" class="collapse">
+                    <p>{{ article.url }}</p>
+
+                </div>
                 <img src='{{ article.urlToImage }}' width="" height="" class="img-responsive">
 
             </li>

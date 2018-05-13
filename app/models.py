@@ -8,14 +8,13 @@ class Articles:
     """
     Articles class to define Article Objects
     """
-    def __init__(self, title, name, url, imageurl, author,timepublished, description):
-        self.title = title
-        self.name = name
-        self.url = url
-        self.imageurl = imageurl
+    def __init__(self, author, title, description, urlToImage, url, publishedAt):
         self.author = author
-        self.timepublished = timepublished
+        self.title = title
         self.description = description
+        self.urlToImage = urlToImage
+        self.url = url
+        self.publishedAt = publishedAt
 
 
 class Sources:
@@ -27,4 +26,4 @@ class Sources:
         self. name = name
         self.description = description
         self.url = url
-        self.category =  category
+        self.category = category

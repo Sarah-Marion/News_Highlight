@@ -1,7 +1,7 @@
 import unittest
 from app.models import Sources
 
-class TestSources(unittest.TestCase):
+class SourcesTest(unittest.TestCase):
     """
     Test Sources class to test behaviours of the Sources class
     

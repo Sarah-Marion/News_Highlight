@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
-{% import 'macros.html' as macros%}
+{% import 'macros.html' as macro%}
 
 {%  block content %}
 
     <div class="container">
         <div class="row">
             <ul>
-                {{ macros.displayArticleLIst(articles)}}
+                {{ macro.displayArticleList(articles)}}
             </ul>
         </div>
     </div>
