@@ -1,4 +1,4 @@
 virtual/
 *__pycache__
-start.sh
+*.sh
 .vscode
