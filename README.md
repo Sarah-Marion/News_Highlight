@@ -40,6 +40,12 @@ As a user I would like:
 > * to see the image, description and time the news article was created.
 > * to click on an article and read it fully from the news source.
 
+## How to use it
+
+> * Internet connection
+> * Click https://display-news-highlights.herokuapp.com/) <br/>
+  or <br/>
+> * Copy https://display-news-highlights.herokuapp.com/) and  Paste the link on your prefered browser
 
 ## Specifications
 
