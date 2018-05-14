@@ -12,10 +12,11 @@
 
 > A simple Flask Application that lists various News sources retrieved from [News API](https://newsapi.org/). A user can click on a News source and be directed to a page that contains News Articles from the selected News source. The article's title, image, date of publication and preview will be displayed and a user can click on the article to be directed to the source's site to read the entire article.
 
-## Setup/Installation Requirements
+## Technologies Used
 
-<!-- > Clone [This Repository](https://github.com/Sarah-Marion/Nesws-Highlight.git) and run the `run.py`file by executing the following commands:-
-> * `chmod +x run.py` then `run.py` -->
+> * Python3.6
+> * Flask framework
+> * Bootstrap
 
 ## Dependancy Installments
 
@@ -39,11 +40,6 @@ As a user I would like:
 > * to see the image, description and time the news article was created.
 > * to click on an article and read it fully from the news source.
 
-## Technologies Used
-
-> * Python3.6
-> * Flask framework
-> * Bootstrap
 
 ## Specifications
 
